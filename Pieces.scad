@@ -24,7 +24,7 @@ module runner_cap() {
     union () {
         end_cap();
         translate([-27.5,-10,0]) difference() {
-            cube([15,18,10]);
+            translate([0,2.5, 0]) cube([15,15,10]);
             translate([5, 10, 7.5]) cylinder(10, 4.1, 4.1, center=true);
         }
         translate([-10,-30,0]) difference() {
@@ -77,17 +77,18 @@ module belt_bracket() {
             }
 
             union() {
-                translate([10, 8, 5]) rotate([90,0,0]) cylinder(9, 2, 2);
-                translate([20, 8, 5]) rotate([90,0,0]) cylinder(9, 2, 2);
-                translate([-1, -1, 3]) cube([11, 9, 4]);
-                translate([20, -1, 3]) cube([11, 9, 4]);
+                translate([10, 8, 5]) rotate([90,0,0]) cylinder(9, 2.5, 2.5);
+                translate([20, 8, 5]) rotate([90,0,0]) cylinder(9, 2.5, 2.5);
+                translate([-1, -1, 2.5]) cube([11, 9, 5]);
+                translate([20, -1, 2.5]) cube([11, 9, 5]);
             }
         }
     }
 
-    for(i = [0:4])
-        translate([i*2, 8, 1]) rotate([90,0,0]) linear_extrude(8) polygon([[0,0], [1,0], [1,0.85]]);
-    for(i = [0:4])
-        translate([30-i*2, 0, 1]) rotate([90,0,180]) linear_extrude(8) polygon([[0,0], [1,0], [1,0.85]]);
+    for(i = [0:5])
+        translate([i*2, 8, 1]) rotate([90,0,0]) linear_extrude(8) polygon([[0,0], [1,0], [1,1.0]]);
+    for(i = [0:5])
+        translate([30-i*2, 0, 1]) rotate([90,0,180]) linear_extrude(8) polygon([[0,0], [1,0], [1,1.0]]);
 }
 
+belt_bracket();

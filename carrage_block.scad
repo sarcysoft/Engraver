@@ -17,7 +17,7 @@ module carrage_block() {
                 translate([11.5,18.5,-10]) cube([35,35,25]);
             }
         }
-        translate([14,-10,0]) rotate([0,0,0]) belt_bracket();
+        translate([14,-10,2]) rotate([0,0,0]) belt_bracket();
     }  
 }
 
