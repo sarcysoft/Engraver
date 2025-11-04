@@ -8,16 +8,17 @@ module gantry_block() {
         difference() {
             union() {
                 cube([44, 68, 12]);
-                translate([26, 9, -8]) cube([18, 8, 8]);
-                translate([26, 51, -8]) cube([18, 8, 8]);
+                translate([26, 0, -1]) cube([18, 68, 1]);
+                translate([26, 8.25, -8.5]) cube([18, 12, 9]);
+                translate([26, 47.75, -8.5]) cube([18, 12, 9]);
                 translate([23,46,12]) {
                     cube([21, 22, 1.5]);
                     translate([4, 18.5, 1.5]) cylinder(3, 1.25, 1.25);
                 }
             }
             union() {
-                translate([35, 25, -6]) rotate([90,0,0]) cylinder(24, 7.6, 7.6);
-                translate([35, 67, -6]) rotate([90,0,0]) cylinder(24, 7.6, 7.6);
+                translate([35, 26.5, -6]) rotate([90,0,0]) cylinder(24.5, 7.6, 7.6);
+                translate([35, 66.0, -6]) rotate([90,0,0]) cylinder(24.5, 7.6, 7.6);
 
                 translate([-1, 7, 6]) rotate([0,90,0]) cylinder(48, 4.1, 4.1);            
                 translate([-1, 61, 6]) rotate([0,90,0]) cylinder(48, 4.1, 4.1);      
@@ -35,7 +36,7 @@ module gantry_block() {
         }      
         
         translate([0,0,12]) motor_bracket();
-        translate([15,49,-10]) rotate([0,0,-90]) belt_bracket();
+        translate([13,49,-10]) rotate([0,0,-90]) belt_bracket();
     }    
 }
 
