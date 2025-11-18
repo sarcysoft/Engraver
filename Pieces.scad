@@ -91,4 +91,23 @@ module belt_bracket() {
         translate([30-i*2, 0, 1]) rotate([90,0,180]) linear_extrude(8) polygon([[0,0], [1,0], [1,1.0]]);
 }
 
+module tension_bracket() {
+    difference() {
+        union() {
+            cylinder(37.5, 16, 16);
+            translate([-22, -16, 0]) cube([38, 32, 4]);
+        }
+        union() {
+            difference() {
+                translate([0,0,-0.5]) cylinder(38.5, 12.25, 12.5);
+                translate([-20,-7.75,-0.5]) cube([40, 15.5, 38.5]);
+            }
+            translate([-20,-6,4]) cube([8, 12, 38.5]);
+            translate([-12.5,-6,-0.5]) cube([35, 12, 38.5]);
+            translate([-6,-20,4]) cube([12, 40, 29.5]);
+            translate([-6.25,-10,-0.5]) cube([12.5, 20, 38.5]);
+        }    
+    }
+}
+
 belt_bracket();
