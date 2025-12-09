@@ -1,7 +1,7 @@
 use <Pieces.scad>
 $fn = 128;
 
-module carrage_block() {
+module carriage_block() {
     //cube([58, 66, 10]);
     
     union() {
@@ -29,4 +29,4 @@ module carrage_block() {
     }  
 }
 
-carrage_block();
+carriage_block();

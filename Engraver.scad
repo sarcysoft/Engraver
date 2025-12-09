@@ -55,12 +55,12 @@ module pully()
     }
 }
 
-module carrage() {
+module carriage() {
 
     translate([6,1,0]) rotate ([0,90,0]) bearing();
     translate([6,55,0]) rotate ([0,90,0]) bearing();
     
-    color("darkcyan") translate([-10,-8,5]) carrage_block();
+    color("darkcyan") translate([-10,-8,5]) carriage_block();
     
     translate([0, 10, -10]) laser();
 }
