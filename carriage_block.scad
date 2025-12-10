@@ -16,11 +16,15 @@ module carriage_block() {
                 translate([16.75, 64, -4.5]) rotate([0,90,0]) cylinder(24.5, 7.5, 7.5);
                 translate([12,19,-10]) cube([36,36,25]);
                 
-                translate([6, 64.5, -4.5]) cylinder(24.5, 2, 2);
-                translate([52, 64.5, -4.5]) cylinder(24.5, 2, 2);
+                translate([6, 9.5, -4.5]) cylinder(24.5, 2.1, 2.1);
+                translate([52, 9.5, -4.5]) cylinder(24.5, 2.1, 2.1);
+                translate([6, 9.5, 0]) cube([6,10,15], center=true);
+                translate([52, 9.5, 0]) cube([6,10,15], center=true);
 
-                translate([6, 64.5, 0]) cube([5,8,15], center=true);
-                translate([52, 64.5, 0]) cube([5,8,15], center=true);
+                translate([6, 64.5, -4.5]) cylinder(24.5, 2.1, 2.1);
+                translate([52, 64.5, -4.5]) cylinder(24.5, 2.1, 2.1);
+                translate([6, 64.5, 0]) cube([6,10,15], center=true);
+                translate([52, 64.5, 0]) cube([6,10,15], center=true);
                 
             }
         }
