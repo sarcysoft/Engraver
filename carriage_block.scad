@@ -8,8 +8,8 @@ module carriage_block() {
         difference() {
             union() {
                 cube([58, 74, 12]);
-                translate([22, 0, -7.5]) cube([14, 20, 8]);
-                translate([22, 54, -7.5]) cube([14, 20, 8]);
+                translate([22, 0, -7.5]) cube([14, 18.5, 8]);
+                translate([22, 55.5, -7.5]) cube([14, 18.5, 8]);
             }
             union() {
                 translate([16.75, 10, -4.5]) rotate([0,90,0]) cylinder(24.5, 7.5, 7.5);
